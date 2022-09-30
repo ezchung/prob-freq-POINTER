@@ -1,3 +1,5 @@
+"use strict";
+
 // add whatever parameters you deem necessary & write doc comment
 function canConstructWord(word,letters) {
     const wordLetterFreq = getFreqCounter(word);
@@ -29,7 +31,7 @@ function getFreqCounter(items){
 //Outputs: true/false
     //Notes: letters always in lowercase in both word and letters
 
-//Representation 
+//Representation
 //('','') => true
 //("aa", abc) => false
 //("aabb", bcabad) => true
@@ -45,5 +47,3 @@ function getFreqCounter(items){
         //return false
 
 //return true
-
-    
