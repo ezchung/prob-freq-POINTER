@@ -1,11 +1,17 @@
 "use strict";
 
 // add whatever parameters you deem necessary & write doc comment
+/** Given a word and letters, find out if we can build word from letters
+ *
+ *  Takes in a string "word" and a string "letter"
+ *
+ *  Returns true/false
+*/
 function canConstructWord(word,letters) {
+    if(letters.length < word.length) return false;
+
     const wordLetterFreq = getFreqCounter(word);
     const letterFreq = getFreqCounter(letters);
-
-    if(letters.length < word.length) return false;
 
     for(let key in wordLetterFreq){
         if(letterFreq[key] < wordLetterFreq[key]){
@@ -14,7 +20,12 @@ function canConstructWord(word,letters) {
     }
     return true;
 }
-
+/** Create a frequency counter and return the object
+ *
+ *  Takes in a string "items"
+ * 
+ *  Returns an object
+*/
 function getFreqCounter(items){
     const freq = {};
 

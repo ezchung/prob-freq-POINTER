@@ -1,6 +1,12 @@
 "use strict";
 
 // add whatever parameters you deem necessary & write docstring
+/** Check if any two numbers in an array has an average equal to a given target average
+ *
+ *  Takes in an array "nums" and a number "targetAvg"
+ *
+ *  Returns true/false
+ */
 function averagePair(nums, targetAvg) {
   let left = 0;
   let right = nums.length - 1;
